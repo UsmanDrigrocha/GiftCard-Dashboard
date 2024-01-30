@@ -28,7 +28,6 @@ export class UsersComponent implements OnInit {
       (data: any) => {
         this.usersArray = data.data;
         this.dataSource.data = this.usersArray;
-        this.utilityService.showSnackbar('User Fetched Successfully !');
       },
       (error: any) => {
         this.utilityService.showSnackbar('Error Getting Users !');
