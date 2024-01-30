@@ -1,0 +1,29 @@
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.mat-table {
+  width: 100%;
+}
+
+/* Ensure header cells wrap text */
+.mat-header-cell,
+.mat-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Set a minimum width for each column */
+.mat-column-name,
+.mat-column-email,
+.mat-column-profilePic {
+  min-width: 150px;
+  /* Adjust as needed */
+}
+
+img#userProfile{
+  height: 50px;
+}
