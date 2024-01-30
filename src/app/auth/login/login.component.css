@@ -1,3 +1,6 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+
 * {
     margin: 0;
     padding: 0;
@@ -34,11 +37,12 @@ h1 {
 }
 
 input#email, input#password {
-    padding: 6px;
+    padding: 10px;
     border: none;
     outline: none;
-    background: red;
+    background: #E8F0FE;
     border-radius: 9px;
+    width: 100%;
 }
 
 
@@ -50,10 +54,26 @@ input#email, input#password {
 }
 
 button {
+    font-size: 15px;
     height: 2rem;
     width: 5rem;
     background: rebeccapurple;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+.password-input {
+    position: relative;
+    background-color: #E8F0FE;
+}
+
+.password-input span {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
     cursor: pointer;
 }

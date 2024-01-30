@@ -47,4 +47,13 @@ export class LoginComponent implements OnInit {
   navigateToHome(){
     this.router.navigate(['/dashboard']);
   }
+
+  // ---------------------------------------------- Password Logic ----------------------------------------------
+
+  passwordFieldType: string = 'password';
+
+  togglePasswordVisibility() {
+    this.passwordFieldType =
+      this.passwordFieldType === 'password' ? 'text' : 'password';
+  }
 }
