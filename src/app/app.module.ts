@@ -11,6 +11,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './users/users.component';
 import { MatTableModule } from '@angular/material/table';
 import { AuthInterceptor } from './auth/auth.interceptor';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     LoginComponent,
     UsersComponent,
     UsersComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     MatSnackBarModule,
     HttpClientModule,
     MatTableModule,
+
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }, // interceptor
