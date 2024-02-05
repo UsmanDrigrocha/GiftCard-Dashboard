@@ -105,3 +105,8 @@ img#sideBarLogo {
 #logout{
   cursor: pointer;
 }
+
+#componentName{
+  padding-left: 24px;
+  font-size: 35px;
+}
