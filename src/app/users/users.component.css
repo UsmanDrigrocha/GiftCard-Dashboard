@@ -8,7 +8,6 @@
   width: 100%;
 }
 
-/* Ensure header cells wrap text */
 .mat-header-cell,
 .mat-cell {
   white-space: nowrap;
@@ -16,15 +15,13 @@
   text-overflow: ellipsis;
 }
 
-/* Set a minimum width for each column */
 .mat-column-name,
 .mat-column-email,
 .mat-column-profilePic {
   min-width: 150px;
-  /* Adjust as needed */
 }
 
-img#userProfile{
+img#userProfile {
   height: 50px;
 }
 
@@ -39,15 +36,68 @@ td {
   text-align: left !important;
 }
 
-th{
-  color:#1F75EC !important;
+th {
+  color: #1F75EC !important;
   text-align: left !important;
   font-size: 20px !important;
   text-align: left !important;
+  user-select: none !important;
 }
 
-td{
-  /* padding-left: 20px !important;
-  padding-right: 20px !important; */
-  font-size: 18px !important;
+td {
+  font-size: 16px !important;
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000A2E;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar h2 {
+  color: #333;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+  transition: .6s !important;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar nav ul li a:hover {
+  color: #1F75EC;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.table-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.mat-table {
+  width: 100%;
+}
+
+img#sideBarLogo {
+  width: 100%;
 }
