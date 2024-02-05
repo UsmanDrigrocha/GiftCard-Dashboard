@@ -9,15 +9,17 @@ import { UtilityService } from '../services/utility.service';
   styleUrls: ['./users.component.css'],
 })
 export class UsersComponent implements OnInit {
+  componentName = "Users";
+
+  usersArray: any[] = [];
+
+  displayedColumns: string[] = ['name', 'email', 'profilePic', 'giftCardPoints', 'gender', 'age','phone'];
+  dataSource = new MatTableDataSource<any>(this.usersArray);
+
   constructor(
     private http: HttpService,
     private utilityService: UtilityService
   ) {}
-
-  usersArray: any[] = [];
-
-  displayedColumns: string[] = ['name', 'email', 'profilePic', 'giftCardPoints'];
-  dataSource = new MatTableDataSource<any>(this.usersArray);
 
   ngOnInit(): void {
     this.getUsersData();
