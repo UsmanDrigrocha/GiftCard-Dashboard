@@ -101,3 +101,7 @@ td {
 img#sideBarLogo {
   width: 100%;
 }
+
+#logout{
+  cursor: pointer;
+}
