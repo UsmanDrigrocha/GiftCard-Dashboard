@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
@@ -12,9 +13,16 @@ export class LoginComponent implements OnInit {
   constructor(
     private utilityService: UtilityService,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private location:Location
   ) {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const token = localStorage.getItem('token');
+    console.log(token);
+    if (token) {
+      this.router.navigate(['/dashboard']);
+    }
+  }
 
   user = {
     email: '',
@@ -34,9 +42,9 @@ export class LoginComponent implements OnInit {
         if (data.status === false) {
           return this.utilityService.showSnackbar(data.errors[0]);
         }
-        localStorage.setItem('token',  data.data.token);
+        localStorage.setItem('token', data.data.token);
         this.utilityService.showSnackbar(data.message);
-        this.navigateToHome()
+        window.location.reload()
       },
       (error: any) => {
         return this.utilityService.showSnackbar('Error occurred while logging');
@@ -44,9 +52,6 @@ export class LoginComponent implements OnInit {
     );
   }
 
-  navigateToHome(){
-    this.router.navigate(['/dashboard']);
-  }
 
   // ---------------------------------------------- Password Logic ----------------------------------------------
 
