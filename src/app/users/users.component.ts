@@ -49,4 +49,8 @@ export class UsersComponent implements OnInit {
     localStorage.removeItem('token');
     window.location.reload()
   }
+
+  logUserId(userId: string) {
+    console.log('Clicked User ID:', userId);
+  }
 }

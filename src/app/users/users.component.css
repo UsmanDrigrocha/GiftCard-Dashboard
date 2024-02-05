@@ -110,3 +110,12 @@ img#sideBarLogo {
   padding-left: 24px;
   font-size: 35px;
 }
+
+#row{
+  cursor: pointer;
+  transition: .6s;
+}
+
+#row:hover{
+  background-color: #3b8bfa;
+}
