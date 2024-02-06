@@ -23,6 +23,7 @@
 
 img#userProfile {
   height: 50px;
+  margin-left: 1rem;
 }
 
 th.mat-header-cell {
