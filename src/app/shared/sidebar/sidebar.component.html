@@ -1,18 +1,16 @@
 <div class="container">
-    <div class="sidebar" id="sidebar">
-      <h2><img src="../../assets/Gift-Card Logo_transparent.png" alt="Gift_Card_Logo" id="sideBarLogo"></h2>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a (click)="logout()" id="logout">Logout</a></li>
-        </ul>
-      </nav>
+  <div class="sidebar" id="sidebar">
+    <h2><img src="../../assets/Gift-Card Logo_transparent.png" alt="Gift_Card_Logo" id="sideBarLogo"></h2>
+    <nav>
+      <ul>
+        <li><a routerLink="/users">Users</a></li>
+        <li><a (click)="logout()" id="logout">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="content">
+    <div class="hamburger" id="hamburger">
+      <!-- Table Content Here -->
     </div>
-    <div class="content">
-      <div class="hamburger" id="hamburger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-      </div>
-    </div>
+  </div>
 </div>

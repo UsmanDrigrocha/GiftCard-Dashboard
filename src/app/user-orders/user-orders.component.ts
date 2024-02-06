@@ -17,4 +17,6 @@ export class UserOrdersComponent implements OnInit {
   }
 
   userID = '';
+
+  componentName="User Orders"
 }
