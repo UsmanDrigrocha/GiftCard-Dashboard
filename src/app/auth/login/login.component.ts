@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
         }
         localStorage.setItem('token', data.data.token);
         this.utilityService.showSnackbar(data.message);
-        window.location.reload()
+        this.router.navigate(['/users']);
       },
       (error: any) => {
         return this.utilityService.showSnackbar('Error occurred while logging');
