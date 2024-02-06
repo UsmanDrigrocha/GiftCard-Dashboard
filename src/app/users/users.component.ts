@@ -54,6 +54,5 @@ export class UsersComponent implements OnInit {
 
   getUserOrders(userId: string) {
     this.router.navigate(['/orders/',userId])
-    console.log('Clicked User ID:', userId);
   }
 }
