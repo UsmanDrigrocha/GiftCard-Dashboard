@@ -11,6 +11,7 @@ import { UsersComponent } from './users/users.component';
 import { MatTableModule } from '@angular/material/table';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { UserOrdersComponent } from './user-orders/user-orders.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     LoginComponent,
     UsersComponent,
     UsersComponent,
-    SidebarComponent
+    SidebarComponent,
+    UserOrdersComponent
   ],
   imports: [
     BrowserModule,

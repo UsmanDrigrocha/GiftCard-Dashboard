@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { HttpService } from '../services/http.service';
 import { UtilityService } from '../services/utility.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -27,6 +28,7 @@ export class UsersComponent implements OnInit {
   constructor(
     private http: HttpService,
     private utilityService: UtilityService,
+    private router:Router
   ) {}
 
   ngOnInit(): void {
@@ -50,7 +52,8 @@ export class UsersComponent implements OnInit {
     window.location.reload()
   }
 
-  logUserId(userId: string) {
+  getUserOrders(userId: string) {
+    this.router.navigate(['/orders/',userId])
     console.log('Clicked User ID:', userId);
   }
 }

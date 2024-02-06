@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { AuthGuard } from './shared/auth/auth.guard';
 import { UsersComponent } from './users/users.component';
+import { UserOrdersComponent } from './user-orders/user-orders.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'users', pathMatch: 'full' },
@@ -12,6 +13,11 @@ const routes: Routes = [
     component: UsersComponent,
     canActivate: [AuthGuard],
   },
+  {
+    path:'orders/:id',
+    component:UserOrdersComponent,
+    canActivate:[AuthGuard]
+  }
 ];
 
 @NgModule({
