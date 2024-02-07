@@ -120,9 +120,3 @@ img#sideBarLogo {
 #row:hover{
   background-color: #3b8bfa;
 }
-
-.mat-column-profilePic {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
