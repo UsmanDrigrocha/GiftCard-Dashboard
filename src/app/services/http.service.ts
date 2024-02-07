@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -11,5 +12,17 @@ export class HttpService {
 
   getUsers() {
     return this.http.get(this.apiBaseUrl + 'admin/get-all-users');
+  }
+
+  getUserOrders(body: string) {
+    return this.http.post(this.apiBaseUrl + 'admin/get-user-cards', {
+      id: body,
+    });
+  }
+
+  fetchData(page: number, pageSize: number): any {
+    return this.http.get(
+      `${this.apiBaseUrl}admin/get-all-users?page=${page}&limit=${pageSize}`
+    );
   }
 }

@@ -56,7 +56,9 @@
         <!--  Rows -->
         <tr mat-row *matRowDef="let element; columns: displayedColumns;" (click)="getUserOrders(element._id)" id="row"></tr>
 
+        
       </table>
     </div>
+    <mat-paginator [length]="totalCount" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="onPageChange($event)" showFirstLastButtons></mat-paginator>
   </div>
 </div>

@@ -12,6 +12,7 @@ import { MatTableModule } from '@angular/material/table';
 import { AuthInterceptor } from './auth/auth.interceptor';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { UserOrdersComponent } from './user-orders/user-orders.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { UserOrdersComponent } from './user-orders/user-orders.component';
     MatSnackBarModule,
     HttpClientModule,
     MatTableModule,
+    MatPaginatorModule ,// MatPaginatorModule
 
   ],
   providers: [
