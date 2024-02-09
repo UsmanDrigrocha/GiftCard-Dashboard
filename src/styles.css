@@ -23,3 +23,12 @@ body {
     margin: 0;
     font-family: 'poppins';
 }
+
+/* User component mat paginator styling */
+.mat-paginator-container,
+mat-option,
+.mat-select-min-line  {
+    color: black !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+}

@@ -103,20 +103,29 @@ img#sideBarLogo {
   width: 100%;
 }
 
-#logout{
+#logout {
   cursor: pointer;
 }
 
-#componentName{
+#componentName {
   padding-left: 24px;
   font-size: 35px;
 }
 
-#row{
+#row {
   cursor: pointer;
   transition: .6s;
 }
 
-#row:hover{
+#row:hover {
   background-color: #3b8bfa;
 }
+
+.content {
+  scrollbar-width: none;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
