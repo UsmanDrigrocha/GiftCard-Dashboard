@@ -1,11 +1,37 @@
 <div class="container">
     <app-sidebar></app-sidebar>
     <div class="content">
-        <h2 id="componentName">{{componentName}}</h2>
-        <div class="table-container">
-            <table class="mat-elevation-z8">
+      <h2 id="componentName">{{componentName}}</h2>
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      
+          <!-- Product Column -->
+          <ng-container matColumnDef="product">
+            <th mat-header-cell *matHeaderCellDef> Product </th>
+            <td mat-cell *matCellDef="let element"> {{ element.productId.productName }} </td>
+          </ng-container>
+      
+          <!-- Sender Column -->
+          <ng-container matColumnDef="sender">
+            <th mat-header-cell *matHeaderCellDef> Sender </th>
+            <td mat-cell *matCellDef="let element"> {{ element.senderID.name }} ({{ element.senderID.email }}) </td>
+          </ng-container>
+      
+          <!-- Receiver Column -->
+          <ng-container matColumnDef="receiver">
+            <th mat-header-cell *matHeaderCellDef> Receiver </th>
+            <td mat-cell *matCellDef="let element"> {{ element.receiverEmail }} </td>
+          </ng-container>
+      
+          <!--  Header -->
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      
+          <!--  Rows -->
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;" id="row"></tr>
 
-            </table>
-        </div>
+        </table>
+      </div>
+      <!-- <mat-paginator [length]="totalCount" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="onPageChange($event)" showFirstLastButtons></mat-paginator> -->
     </div>
-</div>
+  </div>
+  

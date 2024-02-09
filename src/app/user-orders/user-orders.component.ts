@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+// user-orders.component.ts
+
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpService } from '../services/http.service';
-import { UtilityService } from '../services/utility.service';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-user-orders',
@@ -9,30 +11,31 @@ import { UtilityService } from '../services/utility.service';
   styleUrls: ['./user-orders.component.css'],
 })
 export class UserOrdersComponent implements OnInit {
-  constructor(
-    private route: ActivatedRoute,
-    private http: HttpService,
-    private utilityService: UtilityService
-  ) {}
+  constructor(private route: ActivatedRoute, private http: HttpService) {}
 
+  componentName="User Orders"
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       const userID = params['id'];
       this.userID = userID;
+      this.getOrderData();
     });
-    this.getOrderData();
   }
 
-  userID = '';
+  dataSource = new MatTableDataSource<any>();
 
-  componentName = 'User Orders';
+  displayedColumns: string[] = ['product', 'sender', 'receiver'];
+
+  userID = '';
 
   getOrderData() {
     this.http.getUserOrders(this.userID).subscribe(
       (data: any) => {
         console.log(data);
-        if (!data.status) {
-          return this.utilityService.showSnackbar('Error !');
+        if (data.status) {
+          this.dataSource.data = data.data;
+        } else {
+          console.log('Error: ', data.message);
         }
       },
       (error) => {
@@ -41,9 +44,3 @@ export class UserOrdersComponent implements OnInit {
     );
   }
 }
-
-/*user mail/name
-receiver mail/name
-product name
-brand name
- */
