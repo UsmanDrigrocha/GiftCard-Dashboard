@@ -128,3 +128,8 @@ img#sideBarLogo {
         display: none;
     }
 }
+
+#noOrders{
+    padding-left: 24px;
+    font-size: 30px;
+}
