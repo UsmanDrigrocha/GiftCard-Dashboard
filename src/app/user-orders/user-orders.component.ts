@@ -24,14 +24,13 @@ export class UserOrdersComponent implements OnInit {
 
   dataSource = new MatTableDataSource<any>();
 
-  displayedColumns: string[] = ['product', 'sender', 'receiver'];
+  displayedColumns: string[] = ['product', 'sender', 'receiver','price'];
 
   userID = '';
 
   getOrderData() {
     this.http.getUserOrders(this.userID).subscribe(
       (data: any) => {
-        console.log(data);
         if (data.status) {
           this.dataSource.data = data.data;
         } else {

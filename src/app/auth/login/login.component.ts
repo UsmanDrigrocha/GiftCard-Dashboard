@@ -42,7 +42,6 @@ export class LoginComponent implements OnInit {
           return this.utilityService.showSnackbar(data.errors[0]);
         }
         localStorage.setItem('token', data.data.token);
-        this.utilityService.showSnackbar(data.message);
         this.router.navigate(['/users']);
       },
       (error: any) => {

@@ -54,7 +54,6 @@ export class UsersComponent implements OnInit {
 
   logout() {
     localStorage.removeItem('token');
-    window.location.reload();
   }
 
   getUserOrders(userId: string) {
