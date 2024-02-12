@@ -15,7 +15,7 @@ export class SidebarComponent implements OnInit {
     window.location.reload();
   }
 
-  isSidebarHidden: boolean = false;
+  isSidebarHidden: boolean = true;
 
   
   toggleSidebar() {
