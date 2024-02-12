@@ -57,3 +57,18 @@ img#sideBarLogo {
 #logout {
     cursor: pointer;
 }
+
+p#hamburgerIcon {
+    color: white;
+    font-size: 29px;
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    cursor: pointer;
+    transition: .6s !important;
+    border: none;
+}
+
+p#hamburgerIcon:hover{
+    color: #1F75EC !important;
+}
