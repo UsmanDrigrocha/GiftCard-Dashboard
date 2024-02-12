@@ -35,6 +35,8 @@ th.mat-header-cell {
 td {
     border-bottom: none !important;
     text-align: left !important;
+    padding-left: 1.2rem !important;
+    padding-right: 1.2rem !important;
 }
 
 th {
