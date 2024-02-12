@@ -27,8 +27,25 @@ body {
 /* User component mat paginator styling */
 .mat-paginator-container,
 mat-option,
-.mat-select-min-line  {
+.mat-select-min-line {
     color: black !important;
     font-size: 13px !important;
     font-weight: bold !important;
+}
+
+.hideSideBar {
+    width: 8px !important;
+    transition: .6s !important;
+}
+
+.hideSideBar ul {
+    display: none !important;
+}
+
+.hideSideBar #hamburgerIcon {
+    margin-left: 5px !important;
+}
+
+div.hideSideBar #hamburgerIcon {
+    margin-right: -4px !important;
 }

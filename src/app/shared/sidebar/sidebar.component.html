@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="sidebar" id="sidebar">
+  <div class="sidebar" [ngClass]="{'hideSideBar': isSidebarHidden}" id="sidebar">
     <h2><img src="../../assets/Gift-Card Logo_transparent.png" alt="Gift_Card_Logo" id="sideBarLogo"></h2>
     <nav>
       <ul>
@@ -7,11 +7,6 @@
         <li><a (click)="logout()" id="logout">Logout</a></li>
       </ul>
     </nav>
-    <div class="hamburger" id="hamburger">
-      <!-- Table Content Here -->
-      <p id="hamburgerIcon">&#9776;</p>
-    </div>
-  </div>
-  <div class="content">
+    <p (click)="toggleSidebar()" id="hamburgerIcon">&#9776;</p>
   </div>
 </div>
