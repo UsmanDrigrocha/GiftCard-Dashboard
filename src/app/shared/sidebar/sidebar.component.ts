@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-sidebar',
@@ -6,16 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent implements OnInit {
-  constructor() {}
+  constructor(private route:Router) {}
 
   ngOnInit(): void {}
 
   logout() {
     localStorage.removeItem('token');
-    window.location.reload();
+    this.route.navigate(['/orders/1234'])
   }
 
-  isSidebarHidden: boolean = true;
+  isSidebarHidden: boolean = false;
 
   
   toggleSidebar() {
