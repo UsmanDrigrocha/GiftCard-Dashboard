@@ -1,6 +1,6 @@
 .sidebar {
     height: 100%;
-    width: 250px;
+    width: 5rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -38,7 +38,7 @@
 }
 
 .content {
-    margin-left: 250px;
+    margin-left: 5rem;
     padding: 20px;
 }
 
@@ -72,4 +72,8 @@ p#hamburgerIcon {
 
 p#hamburgerIcon:hover{
     color: #1F75EC !important;
+}
+
+table{
+    background: transparent;
 }

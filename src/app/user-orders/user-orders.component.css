@@ -2,56 +2,54 @@
     overflow-x: auto;
     max-width: 100%;
     width: 100%;
-}
-
-.mat-table {
+  }
+  
+  .mat-table {
     width: 100%;
-}
-
-.mat-header-cell,
-.mat-cell {
+  }
+  
+  .mat-header-cell,
+  .mat-cell {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-}
-
-.mat-column-name,
-.mat-column-email,
-.mat-column-profilePic {
+  }
+  
+  .mat-column-name,
+  .mat-column-email,
+  .mat-column-profilePic {
     min-width: 150px;
-}
-
-img#userProfile {
+  }
+  
+  img#userProfile {
     height: 50px;
     margin-left: 1rem;
-}
-
-th.mat-header-cell {
+  }
+  
+  th.mat-header-cell {
     padding-right: 24px;
     font-size: 16px;
     font-weight: bold;
-}
-
-td {
+  }
+  
+  td {
     border-bottom: none !important;
     text-align: left !important;
-    padding-left: 1.2rem !important;
-    padding-right: 1.2rem !important;
-}
-
-th {
+  }
+  
+  th {
     color: #1F75EC !important;
     text-align: left !important;
     font-size: 20px !important;
     text-align: left !important;
     user-select: none !important;
-}
-
-td {
+  }
+  
+  td {
     font-size: 16px !important;
-}
-
-.sidebar {
+  }
+  
+  .sidebar {
     height: 100%;
     width: 250px;
     position: fixed;
@@ -62,76 +60,73 @@ td {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.sidebar h2 {
+  }
+  
+  .sidebar h2 {
     color: #333;
-}
-
-.sidebar nav ul {
+  }
+  
+  .sidebar nav ul {
     list-style-type: none;
     padding: 0;
-}
-
-.sidebar nav ul li {
+  }
+  
+  .sidebar nav ul li {
     margin-bottom: 10px;
-}
-
-.sidebar nav ul li a {
+  }
+  
+  .sidebar nav ul li a {
     transition: .6s !important;
     color: white;
     text-decoration: none;
-}
-
-.sidebar nav ul li a:hover {
+  }
+  
+  .sidebar nav ul li a:hover {
     color: #1F75EC;
-}
-
-.content {
-    margin-left: 250px;
+  }
+  
+  .content {
+    margin-left: 5rem;
     padding: 20px;
-}
-
-.table-container {
+  }
+  
+  .table-container {
     overflow-x: auto;
     max-width: 100%;
-}
-
-.mat-table {
+  }
+  
+  .mat-table {
     width: 100%;
-}
-
-img#sideBarLogo {
+  }
+  
+  img#sideBarLogo {
     width: 100%;
-}
-
-#logout {
+  }
+  
+  #logout {
     cursor: pointer;
-}
-
-#componentName {
+  }
+  
+  #componentName {
     padding-left: 24px;
     font-size: 35px;
-}
-
-#row {
+  }
+  
+  #row {
     cursor: pointer;
     transition: .6s;
-}
-
-#row:hover {
+  }
+  
+  #row:hover {
     background-color: #3b8bfa;
-}
-
-.content {
+  }
+  
+  .content {
     scrollbar-width: none;
-
+  
     ::-webkit-scrollbar {
-        display: none;
+      display: none;
     }
-}
-
-#noOrders{
-    padding-left: 24px;
-    font-size: 30px;
-}
+  }
+  
+  
