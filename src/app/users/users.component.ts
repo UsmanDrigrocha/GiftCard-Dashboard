@@ -23,7 +23,7 @@ export class UsersComponent implements OnInit {
     'gender',
     'age',
     'phone',
-  ];
+  ] ;
   dataSource = new MatTableDataSource<any>(this.usersArray);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

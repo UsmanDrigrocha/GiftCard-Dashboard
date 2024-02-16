@@ -33,6 +33,7 @@ export class UserOrdersComponent implements OnInit {
       (data: any) => {
         if (data.status) {
           this.dataSource.data = data.data;
+          console.log(data.data)
         } else {
           console.log('Error: ', data.message);
         }
